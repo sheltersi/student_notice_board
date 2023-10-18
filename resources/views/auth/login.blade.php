@@ -24,6 +24,12 @@
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
 
+ <!-- Google Recaptcha -->
+ {{-- <div class="g-recaptcha mt-4" data-sitekey={{config('services.recaptcha.key')}}></div> --}}
+<div>
+    
+    {!! NoCaptcha::display() !!}
+</div>
         <!-- Remember Me -->
         <div class="block mt-4">
             <label for="remember_me" class="inline-flex items-center">
